@@ -5,7 +5,7 @@ import getJSON from './getJSON';
 function generateTableHead(table, data) {
   const thead = table.createTHead();
   const row = thead.insertRow();
-  data.forEach(key => {
+  data.forEach((key) => {
     const th = document.createElement('th');
     const text = document.createTextNode(key);
     th.appendChild(text);
@@ -14,11 +14,10 @@ function generateTableHead(table, data) {
 }
 
 function generateTable(table, data) {
-  data.forEach(element => {
+  data.forEach((element) => {
     const row = table.insertRow();
     console.log(element);
-    let key;
-    element.forEach(key => {
+    element.forEach((key) => {
       const cell = row.insertCell();
       const text = document.createTextNode(element[key]);
       cell.appendChild(text);
