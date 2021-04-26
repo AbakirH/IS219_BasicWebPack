@@ -28,7 +28,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js'],
-   
   },
   plugins: [
     new CopyPlugin({
