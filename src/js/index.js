@@ -5,25 +5,25 @@ import getJSON from './getJSON';
 function generateTableHead(table, data) {
   const thead = table.createTHead();
   const row = thead.insertRow();
-  for (const key of data) {
+  data.forEach(key => {
     const th = document.createElement('th');
     const text = document.createTextNode(key);
     th.appendChild(text);
     row.appendChild(th);
-  }
+  });
 }
 
 function generateTable(table, data) {
-  for (const element of data) {
+  data.forEach(element => {
     const row = table.insertRow();
     console.log(element);
     let key;
-    for (key in element) {
+    element.forEach(key => {
       const cell = row.insertCell();
       const text = document.createTextNode(element[key]);
       cell.appendChild(text);
-    }
-  }
+    });
+  });
 }
 
 TestJS();
