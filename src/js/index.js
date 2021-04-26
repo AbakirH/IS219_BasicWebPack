@@ -26,7 +26,6 @@ function generateTable(table, data) {
   }
 }
 
-
 TestJS();
 getJSON('', (data) => {
   console.log(data);
